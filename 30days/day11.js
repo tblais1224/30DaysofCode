@@ -1,3 +1,4 @@
+
 //Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
 //There are 6 lines of input, where each line contains 6 space-separated integers describing 2D Array A; every value in A will be in the inclusive range of -9 to 9.
 

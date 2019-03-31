@@ -26,8 +26,18 @@ function Node(data){
 }
 function Solution(){
 
-	this.insert=function(head,data){
+this.insert=function(head,data){
           //complete this method
+    let node = new Node(data);
+    if (head == null) {
+        head = node;
+    } else {
+        var value = head;
+        while (value.next != null)
+            value = value.next
+        value.next = node;
+    }
+    return head;
     };
 
 	this.display=function(head){

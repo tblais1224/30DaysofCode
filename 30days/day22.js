@@ -45,7 +45,8 @@ function BinarySearchTree() {
         return rightHeight;
       }
     }
-  }; // End of function getHeight
+  };
+ } // End of function getHeight
  // End of function BinarySearchTree
 
 process.stdin.resume();

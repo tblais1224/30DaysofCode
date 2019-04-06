@@ -40,33 +40,19 @@ function BinarySearchTree() {
   // Start of function levelOrder
   this.levelOrder = function(root) {
     // To print values separated by spaces use process.stdout.write(someValue + ' ')
-    let outputLevels = [[root]];
-    for (let i = 0; i < outputLevels.length; i++) {
-        if (!outputLevels[i].includes(root.left){
-            
-        }
+    var temp = [root];
+    var string = '';
+    while (temp.length > 0){
+      var node = temp.shift();
+      string += (node.data + ' ');
+      if (node.left){
+        temp.push(node.left)
+      }
+      if (node.right){
+        temp.push(node.right)
+      }
     }
-    // var string = ``;
-    // var i = 1;
-    // while (i == outputLevels.length) {
-    //   var j = 0;
-    //   while (j < outputLevels[i - 1].length) {
-    //     var tempNode = outputLevels[i-1][j];
-    //     string += `${tempNode.data}`;
-    //     if (!tempNode.left == null) {
-    //       outputLevels[i].push(tempNode.left);
-    //       if (!tempNode.right == null) {
-    //         outputLevels[i].push(tempNode.right);
-    //       }
-    //       i++;
-    //     } else if (!tempNode.right == null) {
-    //       outputLevels[i].push(tempNode.right);
-    //       i++;
-    //     }
-    //     j++;
-    //   }
-    // }
-    // console.log(string);
+    process.stdout.write(string);
   }; // End of function levelOrder
 } // End of function BinarySearchTree
 
